@@ -17,10 +17,23 @@ namespace UserRegistrationUsingRegularExpressions
             string userInput = Console.ReadLine();
             Console.WriteLine("\nThank You For Entering The Details");
             if (regexObject.IsMatch(userInput))
-                Console.WriteLine("\n" + userInput + " is a valid first name");
+                Console.WriteLine("\n" + userInput + " is a valid First Name");
+            else
+                Console.WriteLine("\nYou've entered an invalid Details. Please try again!");
+        }
+        public void ValidatingLastName()
+        {
+            Console.WriteLine("\nEnter Your Last Name: ");
+            string lastName = @"^[A-Z][a-z]{4,}$";
+            Regex regexObject = new Regex(lastName);
+            string userInput = Console.ReadLine();
+            Console.WriteLine("\nThank You For Entering The Details");
+            if (regexObject.IsMatch(userInput))
+                Console.WriteLine("\n " + userInput+ " is a valid Last Name");
             else
                 Console.WriteLine("\nYou've entered an invalid Details. Please try again!");
         }
     }
 }
-    
+
+
