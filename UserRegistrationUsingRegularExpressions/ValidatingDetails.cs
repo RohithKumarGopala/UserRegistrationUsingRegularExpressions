@@ -33,10 +33,12 @@ namespace UserRegistrationUsingRegularExpressions
             else
                 Console.WriteLine("\nYou've entered an invalid Details. Please try again!");
         }
+        //UC9-Validating Email Samples
         public void ValidatingEmailaddress()
         {
             Console.Write("\nEnter Your Email address: ");
-            string emailAddress = @"^[a-z][a-zA-Z0-9.+-]{3,}@[a-z0-9]+[.][a-z]{2,3}[.]?[a-z]{0,3}$";
+            //string emailAddress = @"^[a-z][a-zA-Z0-9.+-]{3,}@[a-z0-9]+[.][a-z]{2,3}[.]?[a-z]{0,3}$";
+            string emailAddress = @"^[a-z]+([+_.-]?[A-Za-z0-9])*[@][A-Za-z0-9]+([.][a-z]{2,3}){1,2}$";
             Regex regexObject = new Regex(emailAddress);
             string userInput = Console.ReadLine();
             Console.WriteLine("\nThank You For Entering The Details");

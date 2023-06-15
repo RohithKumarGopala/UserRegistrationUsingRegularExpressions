@@ -10,9 +10,9 @@
 
             //validatingDetails.ValidatingFirstName();
             //validatingDetails.ValidatingLastName();
-            //validatingDetails.ValidatingEmailaddress();
+            validatingDetails.ValidatingEmailaddress();
             //validatingDetails.ValidatingMoblieNumber();
-            validatingDetails.ValidatingPassword();
+            //validatingDetails.ValidatingPassword();
         }
     }
 }
