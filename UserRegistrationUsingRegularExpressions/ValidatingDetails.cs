@@ -29,7 +29,7 @@ namespace UserRegistrationUsingRegularExpressions
             string userInput = Console.ReadLine();
             Console.WriteLine("\nThank You For Entering The Details");
             if (regexObject.IsMatch(userInput))
-                Console.WriteLine("\n " + userInput+ " is a valid Last Name");
+                Console.WriteLine("\n " + userInput + " is a valid Last Name");
             else
                 Console.WriteLine("\nYou've entered an invalid Details. Please try again!");
         }
@@ -40,14 +40,27 @@ namespace UserRegistrationUsingRegularExpressions
             Regex regexObject = new Regex(emailAddress);
             string userInput = Console.ReadLine();
             Console.WriteLine("\nThank You For Entering The Details");
-            if 
+            if
                 (regexObject.IsMatch(userInput))
                 Console.WriteLine("\n" + userInput + " is a valid email address");
             else
                 Console.WriteLine("\nYou've entered an invalid email address. Please try again!");
         }
+        public void ValidatingMoblieNumber()
+        {
+            Console.WriteLine("\nEnter Your Mobile Number: ");
+            string MobileNumber = @"^(91)[\s][0-9]{10}$";
+            Regex regexObject = new Regex(MobileNumber);
+            string userInput = Console.ReadLine();
+            Console.WriteLine("\nThank You For Entering The Details");
+            if (regexObject.IsMatch(userInput))
+                Console.WriteLine("\nThe Mobile Number " + userInput + " Is Valid. ");
+            else
+                Console.WriteLine("\nYou've entered an invalid Moblie Number. Please try again!");
+        }
     }
 }
-   
+
+
 
 
