@@ -61,7 +61,7 @@ namespace UserRegistrationUsingRegularExpressions
         public void ValidatingPassword()
         {
             Console.Write("\nEnter Your password: ");
-            string password = @"^[a-zA-Z0-9~!@#$&*-]{8,}$";
+            string password = @"^(?=.*[A-Z])[a-zA-Z0-9~!@#$&*-]{8,}$";
             Regex regexObject = new Regex(password);
             string userInput = Console.ReadLine();
             Console.WriteLine("\nThank You For Entering The Details.");
