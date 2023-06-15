@@ -11,7 +11,8 @@
             //validatingDetails.ValidatingFirstName();
             //validatingDetails.ValidatingLastName();
             //validatingDetails.ValidatingEmailaddress();
-            validatingDetails.ValidatingMoblieNumber();
+            //validatingDetails.ValidatingMoblieNumber();
+            validatingDetails.ValidatingPassword();
         }
     }
 }

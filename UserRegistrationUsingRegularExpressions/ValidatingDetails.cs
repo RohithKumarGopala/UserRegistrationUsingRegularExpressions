@@ -58,9 +58,20 @@ namespace UserRegistrationUsingRegularExpressions
             else
                 Console.WriteLine("\nYou've entered an invalid Moblie Number. Please try again!");
         }
+        public void ValidatingPassword()
+        {
+            Console.Write("\nEnter Your password: ");
+            string password = @"^[a-zA-Z0-9~!@#$&*-]{8,}$";
+            Regex regexObject = new Regex(password);
+            string userInput = Console.ReadLine();
+            Console.WriteLine("\nThank You For Entering The Details.");
+            if (regexObject.IsMatch(userInput))
+                Console.WriteLine("\n" + userInput + " is a valid password.");
+            else
+                Console.WriteLine("\nYou've entered an invalid password. Please try again!");
+        }
     }
 }
-
 
 
 
