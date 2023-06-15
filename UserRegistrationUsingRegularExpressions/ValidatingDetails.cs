@@ -33,7 +33,21 @@ namespace UserRegistrationUsingRegularExpressions
             else
                 Console.WriteLine("\nYou've entered an invalid Details. Please try again!");
         }
+        public void ValidatingEmailaddress()
+        {
+            Console.Write("\nEnter Your Email address: ");
+            string emailAddress = @"^[a-z][a-zA-Z0-9.+-]{3,}@[a-z0-9]+[.][a-z]{2,3}[.]?[a-z]{0,3}$";
+            Regex regexObject = new Regex(emailAddress);
+            string userInput = Console.ReadLine();
+            Console.WriteLine("\nThank You For Entering The Details");
+            if 
+                (regexObject.IsMatch(userInput))
+                Console.WriteLine("\n" + userInput + " is a valid email address");
+            else
+                Console.WriteLine("\nYou've entered an invalid email address. Please try again!");
+        }
     }
 }
+   
 
 

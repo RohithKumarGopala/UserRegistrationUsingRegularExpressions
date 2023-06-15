@@ -9,7 +9,8 @@
             ValidatingDetails validatingDetails = new ValidatingDetails();
 
             //validatingDetails.ValidatingFirstName();
-            validatingDetails.ValidatingLastName();
+            //validatingDetails.ValidatingLastName();
+            validatingDetails.ValidatingEmailaddress();
         }
     }
 }
